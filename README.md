@@ -34,6 +34,11 @@ DAG Structure
 extract_task --> transform_task --> load_task
 
 
+
+![image](https://github.com/user-attachments/assets/aefb6e96-4e89-4aec-b862-fb3dc8f9e404)
+
+
+
 Installation
 Prerequisites
 Python 3.7+
@@ -80,7 +85,12 @@ airflow scheduler
 '''
 
 3) Navigate to the Airflow UI at http://localhost:8080, locate the HAPI_FHIR_ETL DAG, and trigger it.
+   
 4) Monitor the ETL tasks (extract_task, transform_task, load_task) through the Airflow UI.
+
+
+![image](https://github.com/user-attachments/assets/47c46ba8-b782-44a8-979d-8815d8bdb3b9)
+
 
 
 Contributing
