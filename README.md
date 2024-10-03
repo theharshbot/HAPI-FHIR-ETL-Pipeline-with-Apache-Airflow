@@ -44,6 +44,7 @@ Docker (Optional)
 
 Python Dependencies
 Ensure the following Python libraries are installed:
+
 '''
 pip install pandas requests psycopg2 airflow
 '''
@@ -51,6 +52,7 @@ pip install pandas requests psycopg2 airflow
 PostgreSQL Setup
 
 1)Set up a PostgreSQL database locally or through Docker using the following command:
+
 '''
 docker run --name postgres -e POSTGRES_USER=airflow -e POSTGRES_PASSWORD=airflow -d -p 5432:5432 postgres
 '''
@@ -62,16 +64,21 @@ Configuration
 1) Airflow Configuration: Make sure Airflow is installed and running on your machine.
 2) DAG Configuration: Place the provided HAPI_FHIR_ETL.py file into your Airflow DAGs directory.
 3) PostgreSQL Connection: Update the PostgreSQL credentials if necessary in the load_fn function in HAPI_FHIR_ETL.py.
+
+   
 Usage
 1) Clone the repository:
+   
 '''
 git clone https://github.com/your-username/hapi-fhir-etl-pipeline.git
 '''
+
 2) Start the Airflow webserver and scheduler:
 '''
 airflow webserver
 airflow scheduler
 '''
+
 3) Navigate to the Airflow UI at http://localhost:8080, locate the HAPI_FHIR_ETL DAG, and trigger it.
 4) Monitor the ETL tasks (extract_task, transform_task, load_task) through the Airflow UI.
 
